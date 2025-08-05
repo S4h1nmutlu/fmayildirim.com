@@ -1,0 +1,10 @@
+motor:
+a.t.v. benzinli 4 zamanlı tek silindir 150cc hava soğutmalı ileri geri vitesli şaftlı.
+hareket:difrensiyelli aks mili
+frenler: 4 tekerde disk hidrolikli.
+tekerleri: 12 jant 90-54c
+elektrik: 12volt 9amp akü klometre saati korna sinyal park far
+bagaj: 110x90x27 arkasında kasa
+döşeme : 80x40 , 70x25 sırtlık
+el freni: sabitleme (park)
+ön aska amartasör veya makas
