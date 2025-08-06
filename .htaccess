@@ -1,0 +1,26 @@
+RewriteEngine On
+
+# www olmadan gelen istekleri www'lu versiyona yönlendir
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# .html uzantısını gizle
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# Dosya uzantısı olmadan gelen istekleri .html ile tamamla
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Ana sayfa için yönlendirme
+RewriteRule ^$ index.html [L]
+
+# Ürünler sayfası için yönlendirme
+RewriteRule ^urunler/?$ ürünlerimiz.html [L]
+
+# İletişim sayfası için yönlendirme
+RewriteRule ^iletisim/?$ iletişim.html [L]
+
+# 404 hata sayfası
+ErrorDocument 404 /404.html 
